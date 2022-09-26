@@ -1,0 +1,26 @@
+@media (max-width: 740px) {
+    .Form-Desc {
+        padding-left: 16px;
+    }
+    .Review__rating-container {
+        display: unset;
+    }
+    .Review__rating-content {
+        justify-content: center;
+    }
+    .Review__rating-btn {
+        text-align: center;
+    }
+    .Rating-icons__wrap {
+        justify-content: center;
+    }
+    .Review__contact-container {
+        width: 100%;
+    }
+    .Review-comment {
+        max-width: 100%;
+    }
+    .Reviews-comment__img-item {
+        padding-right: 34px;
+    }
+}

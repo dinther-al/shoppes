@@ -1,0 +1,34 @@
+.Form {
+    width: 700px;
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.subnav .subnav_link {
+    float: left;
+    text-align: left;
+    color: #878690;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.subnav:hover {
+    cursor: pointer;
+}
+
+.subnav .subnav_link:hover {
+    background-color: #ddd;
+    color: var(--black-color);
+}
+
+.subnav .subnav_link.active {
+    border-bottom: 2px solid #100D22;
+    color: var(--black-color);
+}

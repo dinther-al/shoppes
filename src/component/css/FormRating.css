@@ -1,0 +1,8 @@
+.Rating-icons__wrap {
+    display: flex;
+}
+
+.RatingIcon {
+    width: 3.5rem;
+    cursor: pointer;
+}

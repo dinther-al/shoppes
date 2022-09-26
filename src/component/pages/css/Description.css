@@ -1,0 +1,10 @@
+.Description {
+    max-width: 700px;
+}
+
+.Description__text {
+    padding: 14px 16px;
+    font-size: 1.6rem;
+    color: #878690;
+    line-height: 1.2;
+}

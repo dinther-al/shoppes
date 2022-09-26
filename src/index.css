@@ -58,7 +58,15 @@ body {
   line-height: 1.6rem;
 }
 
+.btn:hover {
+  opacity: 0.7;
+}
+
 .btn--primary {
   background-color: var(--black-color);
   color: var(--white-color);
+}
+
+.btn.btn-size__m {
+  width: 180px;
 }

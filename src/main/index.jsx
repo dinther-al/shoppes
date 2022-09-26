@@ -1,11 +1,12 @@
 import React from "react";
-import Banner from "../component/homepage/Banner";
-import "../index.css"
+import { BrowserRouter as Router } from "react-router-dom";
+import FormDesc from "../component/form-desc/FormDesc";
+import "../index.css";
 
 export default function Homepage() {
   return (
     <div>
-      <Banner />
+        <FormDesc />
     </div>
   );
 }
