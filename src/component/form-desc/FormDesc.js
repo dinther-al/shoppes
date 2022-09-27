@@ -1,42 +1,46 @@
-import { Routes, Route, Link } from "react-router-dom";
 import React, { useState } from "react";
 import "../css/FormDesc.css";
 import "../css/grid.css";
 import "../../index.css";
 import Description from "../pages/Description";
 import Reviews from "../pages/Reviews";
+
+const titles = [
+  {
+    id: 1,
+    name: "Description",
+  },
+  {
+    id: 2,
+    name: "Reviews (15)",
+  },
+];
+
 export default function FormDesc() {
-  const [isActiveTabDesc, setIsActiveTabDesc] = useState(true);
+  const [titleId, setTitleId] = useState(1);
+
+  console.log(titleId);
 
   return (
     <div className="Form-Desc grid wide">
       <nav>
         <ul className="nav">
-          <li className="subnav">
-            <Link
-              className={`subnav_link ${isActiveTabDesc && 'active'}`}
-              to="/"
-              onClick={() => setIsActiveTabDesc(true)}
-            >
-              Description
-            </Link>
-          </li>
-          <li className="subnav">
-            <Link 
-            className={`subnav_link ${isActiveTabDesc === false ? 'active' : ''}`}
-              to="/link"
-              onClick={() => {setIsActiveTabDesc(false)}}
-            >
-              Reviews (15)
-            </Link>
-          </li>
+          {titles.map((title) => {
+            return (
+              <li className="subnav" key={title.id}>
+                <p
+                  className={`subnav_link ${titleId === title.id && "active"}`}
+                  onClick={() => setTitleId(title.id)}
+                >
+                  {title.name}
+                </p>
+              </li>
+            );
+          })}
         </ul>
       </nav>
-
       
-      <Routes>
-        {isActiveTabDesc === true ? <Route path="/" element={<Description />} /> : <Route path="/link" element={<Reviews />} />}
-      </Routes>
+      {titleId === 2 ? <Reviews /> : <Description />}
     </div>
   );
 }
